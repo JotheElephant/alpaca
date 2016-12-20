@@ -179,6 +179,7 @@ export default class CustomQuiz extends React.Component {
     };
     axios.delete('/questions', config)
       .then((something) => {
+        console.log('this is something from deleting question: ', something);
         this.getTestNameCurrentQuestions();
       });
   }
@@ -260,11 +261,11 @@ export default class CustomQuiz extends React.Component {
             <div className='col-md-6'>
               <div>
                 <h3>Click questions below to delete them once created!</h3>
-                  <h4>Author Questions</h4>
+
                     {this.state.currAuthorQues.map((option, i) => (
                       <button
                         key={i}
-                        className={`answer btn btn-lg btn-danger ${option}`}>{option}
+                        className={`answer btn btn-lg btn-danger ${option.name}`}>{option.name}
                       </button> ))}
                   <h4>Your Questions</h4>
                     {this.state.currUserQues.map((option, i) =>

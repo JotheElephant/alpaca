@@ -92,15 +92,18 @@ module.exports = {
         };
         res.json(testInfo);
       });
-    },
-    deleteQuestion: function(req, res) {
-      console.log(req.query);
-      // db.Question.destroy({
-      //   where: {
-      //     id: req.query.id
-      //   }
-      // });
     }
+    // deleteQuestion: function(req, res) {
+    //   console.log(req.query);
+    //   db.Question.destroy({
+    //     where: {
+    //       id: req.query.id
+    //     }
+    //   }).then( (things) => {
+    //     console.log(things);
+    //     res.json(things);
+    //   });
+    // }
   },
   quizzes: {
     // Get the users quizzes.

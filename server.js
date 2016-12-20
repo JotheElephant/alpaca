@@ -78,7 +78,7 @@ passport.use('local-login', new LocalStrategy({
 // Connect controller methods to their corresponding routes
 router.get('/user', controller.user.get);
 router.get('/questions/build', controller.questions.getBuildQuestions);
-router.delete('/questions', controller.questions.deleteQuestion);
+// router.delete('/questions', controller.questions.deleteQuestion);
 router.get('/categories', controller.categories.get);
 router.get('/questions', controller.questions.get);
 router.get('/quizzes/public', controller.quizzes.getPublic);
